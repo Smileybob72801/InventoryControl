@@ -11,15 +11,18 @@ namespace InventoryControl
     [POCOViewModel]
     public class MainViewModel
     {
-        // This is ViewModel for our application
-        public MainViewModel()
+		public string Title { get; } = "Inventory Control";
+		
+		public MainViewModel()
         {
-            Title = "Inventory Control";
+
         }
-        public string Title
+
+        private void LoadProducts()
         {
-            get;
+           
         }
+
         #region Lifetime
         public async Task OnCreate()
         {
