@@ -33,6 +33,7 @@
 			gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
 			panelControl1 = new DevExpress.XtraEditors.PanelControl();
 			btnSaveProducts = new DevExpress.XtraEditors.SimpleButton();
+			btnAddNewProduct = new DevExpress.XtraEditors.SimpleButton();
 			((System.ComponentModel.ISupportInitialize)gridControl1).BeginInit();
 			((System.ComponentModel.ISupportInitialize)gridView1).BeginInit();
 			((System.ComponentModel.ISupportInitialize)panelControl1).BeginInit();
@@ -46,9 +47,8 @@
 			gridControl1.MainView = gridView1;
 			gridControl1.Name = "gridControl1";
 			gridControl1.Size = new Size(800, 450);
-			gridControl1.TabIndex = 0;
+			gridControl1.TabIndex = 3;
 			gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] { gridView1 });
-			gridControl1.Click += gridControl1_Click;
 			// 
 			// gridView1
 			// 
@@ -57,6 +57,7 @@
 			// 
 			// panelControl1
 			// 
+			panelControl1.Controls.Add(btnAddNewProduct);
 			panelControl1.Controls.Add(btnSaveProducts);
 			panelControl1.Dock = DockStyle.Top;
 			panelControl1.Location = new Point(0, 0);
@@ -71,8 +72,20 @@
 			btnSaveProducts.Location = new Point(2, 2);
 			btnSaveProducts.Name = "btnSaveProducts";
 			btnSaveProducts.Size = new Size(37, 36);
-			btnSaveProducts.TabIndex = 0;
+			btnSaveProducts.TabIndex = 1;
 			btnSaveProducts.ToolTip = "Save changes to the database.";
+			btnSaveProducts.Click += BtnSaveProducts_Click;
+			// 
+			// btnAddNewProduct
+			// 
+			btnAddNewProduct.AllowHtmlTextInToolTip = DevExpress.Utils.DefaultBoolean.True;
+			btnAddNewProduct.Dock = DockStyle.Left;
+			btnAddNewProduct.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("btnAddNewProduct.ImageOptions.SvgImage");
+			btnAddNewProduct.Location = new Point(39, 2);
+			btnAddNewProduct.Name = "btnAddNewProduct";
+			btnAddNewProduct.Size = new Size(37, 36);
+			btnAddNewProduct.TabIndex = 2;
+			btnAddNewProduct.Click += btnAddNewProduct_Click;
 			// 
 			// ProductManagementControl
 			// 
@@ -96,5 +109,6 @@
 		private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
 		private DevExpress.XtraEditors.PanelControl panelControl1;
 		private DevExpress.XtraEditors.SimpleButton btnSaveProducts;
+		private DevExpress.XtraEditors.SimpleButton btnAddNewProduct;
 	}
 }
