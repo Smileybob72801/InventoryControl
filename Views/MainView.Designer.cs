@@ -39,6 +39,7 @@
 			mvvmContext1 = new DevExpress.Utils.MVVM.MVVMContext(components);
 			ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
 			panelControl1 = new DevExpress.XtraEditors.PanelControl();
+			barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
 			((System.ComponentModel.ISupportInitialize)ribbonControl1).BeginInit();
 			((System.ComponentModel.ISupportInitialize)mvvmContext1).BeginInit();
 			((System.ComponentModel.ISupportInitialize)panelControl1).BeginInit();
@@ -47,16 +48,16 @@
 			// ribbonControl1
 			// 
 			ribbonControl1.ExpandCollapseItem.Id = 0;
-			ribbonControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] { ribbonControl1.ExpandCollapseItem, btnManageProducts });
+			ribbonControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] { ribbonControl1.ExpandCollapseItem, btnManageProducts, barButtonItem1 });
 			ribbonControl1.Location = new Point(0, 0);
-			ribbonControl1.MaxItemId = 2;
+			ribbonControl1.MaxItemId = 3;
 			ribbonControl1.Name = "ribbonControl1";
 			ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] { ribbonPageProducts, ribbonPage2 });
 			ribbonControl1.Size = new Size(841, 158);
 			// 
 			// btnManageProducts
 			// 
-			btnManageProducts.Caption = "Manage Products";
+			btnManageProducts.Caption = "Edit Products";
 			btnManageProducts.Id = 1;
 			btnManageProducts.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("btnManageProducts.ImageOptions.SvgImage");
 			btnManageProducts.Name = "btnManageProducts";
@@ -71,8 +72,9 @@
 			// ribbonPageGroup1
 			// 
 			ribbonPageGroup1.ItemLinks.Add(btnManageProducts);
+			ribbonPageGroup1.ItemLinks.Add(barButtonItem1);
 			ribbonPageGroup1.Name = "ribbonPageGroup1";
-			ribbonPageGroup1.Text = "ribbonPageGroup1";
+			ribbonPageGroup1.Text = "Product Management";
 			// 
 			// ribbonPage2
 			// 
@@ -101,6 +103,13 @@
 			panelControl1.Name = "panelControl1";
 			panelControl1.Size = new Size(841, 256);
 			panelControl1.TabIndex = 1;
+			// 
+			// barButtonItem1
+			// 
+			barButtonItem1.Caption = "View Products";
+			barButtonItem1.Id = 2;
+			barButtonItem1.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("barButtonItem1.ImageOptions.SvgImage");
+			barButtonItem1.Name = "barButtonItem1";
 			// 
 			// MainView
 			// 
@@ -131,6 +140,7 @@
 		private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage3;
 		private DevExpress.XtraBars.BarButtonItem btnManageProducts;
 		private DevExpress.XtraEditors.PanelControl panelControl1;
+		private DevExpress.XtraBars.BarButtonItem barButtonItem1;
 	}
 }
 
