@@ -29,12 +29,14 @@
 		private void InitializeComponent()
 		{
 			components = new System.ComponentModel.Container();
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainView));
 			ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
-			ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+			btnManageProducts = new DevExpress.XtraBars.BarButtonItem();
+			ribbonPageProducts = new DevExpress.XtraBars.Ribbon.RibbonPage();
 			ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-			mvvmContext1 = new DevExpress.Utils.MVVM.MVVMContext(components);
 			ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
 			ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+			mvvmContext1 = new DevExpress.Utils.MVVM.MVVMContext(components);
 			ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
 			((System.ComponentModel.ISupportInitialize)ribbonControl1).BeginInit();
 			((System.ComponentModel.ISupportInitialize)mvvmContext1).BeginInit();
@@ -43,27 +45,32 @@
 			// ribbonControl1
 			// 
 			ribbonControl1.ExpandCollapseItem.Id = 0;
-			ribbonControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] { ribbonControl1.ExpandCollapseItem });
+			ribbonControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] { ribbonControl1.ExpandCollapseItem, btnManageProducts });
 			ribbonControl1.Location = new Point(0, 0);
-			ribbonControl1.MaxItemId = 1;
+			ribbonControl1.MaxItemId = 2;
 			ribbonControl1.Name = "ribbonControl1";
-			ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] { ribbonPage1, ribbonPage2 });
+			ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] { ribbonPageProducts, ribbonPage2 });
 			ribbonControl1.Size = new Size(841, 158);
 			// 
-			// ribbonPage1
+			// btnManageProducts
 			// 
-			ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] { ribbonPageGroup1 });
-			ribbonPage1.Name = "ribbonPage1";
-			ribbonPage1.Text = "ribbonPage1";
+			btnManageProducts.Caption = "Manage Products";
+			btnManageProducts.Id = 1;
+			btnManageProducts.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("btnManageProducts.ImageOptions.SvgImage");
+			btnManageProducts.Name = "btnManageProducts";
+			btnManageProducts.ItemClick += btnManageProducts_ItemClick;
+			// 
+			// ribbonPageProducts
+			// 
+			ribbonPageProducts.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] { ribbonPageGroup1 });
+			ribbonPageProducts.Name = "ribbonPageProducts";
+			ribbonPageProducts.Text = "Products";
 			// 
 			// ribbonPageGroup1
 			// 
+			ribbonPageGroup1.ItemLinks.Add(btnManageProducts);
 			ribbonPageGroup1.Name = "ribbonPageGroup1";
 			ribbonPageGroup1.Text = "ribbonPageGroup1";
-			// 
-			// mvvmContext1
-			// 
-			mvvmContext1.ContainerControl = this;
 			// 
 			// ribbonPage2
 			// 
@@ -75,6 +82,10 @@
 			// 
 			ribbonPageGroup2.Name = "ribbonPageGroup2";
 			ribbonPageGroup2.Text = "ribbonPageGroup2";
+			// 
+			// mvvmContext1
+			// 
+			mvvmContext1.ContainerControl = this;
 			// 
 			// ribbonPage3
 			// 
@@ -99,12 +110,13 @@
 		#endregion
 
 		private DevExpress.XtraBars.Ribbon.RibbonControl ribbonControl1;
-        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage1;
+        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPageProducts;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
         private DevExpress.Utils.MVVM.MVVMContext mvvmContext1;
 		private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage2;
 		private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
 		private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage3;
+		private DevExpress.XtraBars.BarButtonItem btnManageProducts;
 	}
 }
 
