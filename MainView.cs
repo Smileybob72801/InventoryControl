@@ -30,10 +30,10 @@ namespace InventoryControl
 			fluent.SetBinding(this, view => view.Text, x => x.Title);
 		}
 
-		private void btnManageProducts_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+		private void BtnManageProducts_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
 		{
-			// TODO PLACEHOLDER
-			MessageBox.Show($"The {e.Item.Caption} was clicked.");
+			ProductManagementForm productForm = new();
+			productForm.ShowDialog();
 		}
 	}
 }

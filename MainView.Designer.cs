@@ -58,7 +58,7 @@
 			btnManageProducts.Id = 1;
 			btnManageProducts.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("btnManageProducts.ImageOptions.SvgImage");
 			btnManageProducts.Name = "btnManageProducts";
-			btnManageProducts.ItemClick += btnManageProducts_ItemClick;
+			btnManageProducts.ItemClick += BtnManageProducts_ItemClick;
 			// 
 			// ribbonPageProducts
 			// 

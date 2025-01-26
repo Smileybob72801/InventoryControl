@@ -57,6 +57,7 @@
 			Controls.Add(gridControl1);
 			Name = "ProductManagementForm";
 			Text = "ProductManagementForm";
+			Load += ProductManagementForm_Load;
 			((System.ComponentModel.ISupportInitialize)gridControl1).EndInit();
 			((System.ComponentModel.ISupportInitialize)gridView1).EndInit();
 			ResumeLayout(false);
