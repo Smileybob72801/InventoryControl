@@ -35,9 +35,18 @@ namespace InventoryControl
 			ProductManagementControl productManagementControl = new();
 			productManagementControl.Dock = DockStyle.Fill;
 
-			panelControl1.Controls.Clear();
+			ShowControl(productManagementControl);
+		}
 
-			panelControl1.Controls.Add(productManagementControl);
+		/// <summary>
+		/// Displays the specified <see cref="UserControl"/> within the main panel.
+		/// </summary>
+		/// <param name="control">The <see cref="UserControl"/> to be displayed.</param>
+		private void ShowControl(UserControl control)
+		{
+			control.Dock = DockStyle.Fill;
+			panelControl1.Controls.Clear();
+			panelControl1.Controls.Add(control);
 		}
 	}
 }
