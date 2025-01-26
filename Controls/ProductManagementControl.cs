@@ -1,4 +1,6 @@
-﻿using System;
+﻿using InventoryControl.Data;
+using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,14 +21,16 @@ namespace InventoryControl
 
 		private void ProductManagementForm_Load(object sender, EventArgs e)
 		{
-			var products = new List<Product>
-			{
-				new() { Id = 1, Name = "Widget", Price = 27.99m, UnitsInStock = 31 },
-				new() { Id = 2, Name = "Gizmo", Price = 99.87m, UnitsInStock = 7 },
-				new() { Id = 3, Name = "Doohickey", Price = 2.99m, UnitsInStock = 127 }
-			};
+			using var context = new NorthwindContext();
 
-			gridControl1.DataSource = products;
+			var products = context.Products
+				.Include(product => product.Category)
+				.Include(product => product.Supplier)
+				.ToList();
+
+			gridControl1 .DataSource = products;
+
+			gridView1.Columns["Category"].Visible = false;
 		}
 	}
 }

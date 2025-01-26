@@ -49,14 +49,13 @@
 			gridView1.GridControl = gridControl1;
 			gridView1.Name = "gridView1";
 			// 
-			// ProductManagementForm
+			// ProductManagementControl
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
-			ClientSize = new Size(800, 450);
 			Controls.Add(gridControl1);
-			Name = "ProductManagementForm";
-			Text = "ProductManagementForm";
+			Name = "ProductManagementControl";
+			Size = new Size(800, 450);
 			Load += ProductManagementForm_Load;
 			((System.ComponentModel.ISupportInitialize)gridControl1).EndInit();
 			((System.ComponentModel.ISupportInitialize)gridView1).EndInit();
