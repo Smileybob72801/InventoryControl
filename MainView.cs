@@ -32,8 +32,8 @@ namespace InventoryControl
 
 		private void BtnManageProducts_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
 		{
-			ProductManagementForm productForm = new();
-			productForm.ShowDialog();
+			//ProductManagementForm productForm = new();
+			//productForm.ShowDialog();
 		}
 	}
 }

@@ -38,8 +38,10 @@
 			ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
 			mvvmContext1 = new DevExpress.Utils.MVVM.MVVMContext(components);
 			ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+			panelControl1 = new DevExpress.XtraEditors.PanelControl();
 			((System.ComponentModel.ISupportInitialize)ribbonControl1).BeginInit();
 			((System.ComponentModel.ISupportInitialize)mvvmContext1).BeginInit();
+			((System.ComponentModel.ISupportInitialize)panelControl1).BeginInit();
 			SuspendLayout();
 			// 
 			// ribbonControl1
@@ -92,17 +94,27 @@
 			ribbonPage3.Name = "ribbonPage3";
 			ribbonPage3.Text = "ribbonPage3";
 			// 
+			// panelControl1
+			// 
+			panelControl1.Dock = DockStyle.Fill;
+			panelControl1.Location = new Point(0, 158);
+			panelControl1.Name = "panelControl1";
+			panelControl1.Size = new Size(841, 256);
+			panelControl1.TabIndex = 1;
+			// 
 			// MainView
 			// 
 			AutoScaleDimensions = new SizeF(6F, 13F);
 			AutoScaleMode = AutoScaleMode.Font;
 			ClientSize = new Size(841, 414);
+			Controls.Add(panelControl1);
 			Controls.Add(ribbonControl1);
 			Name = "MainView";
 			Ribbon = ribbonControl1;
 			Text = "{Title}";
 			((System.ComponentModel.ISupportInitialize)ribbonControl1).EndInit();
 			((System.ComponentModel.ISupportInitialize)mvvmContext1).EndInit();
+			((System.ComponentModel.ISupportInitialize)panelControl1).EndInit();
 			ResumeLayout(false);
 			PerformLayout();
 		}
@@ -117,6 +129,7 @@
 		private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
 		private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage3;
 		private DevExpress.XtraBars.BarButtonItem btnManageProducts;
+		private DevExpress.XtraEditors.PanelControl panelControl1;
 	}
 }
 
