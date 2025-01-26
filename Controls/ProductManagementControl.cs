@@ -1,14 +1,5 @@
 ﻿using InventoryControl.Data;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace InventoryControl
 {
@@ -21,16 +12,20 @@ namespace InventoryControl
 
 		private void ProductManagementForm_Load(object sender, EventArgs e)
 		{
-			using var context = new NorthwindContext();
+			using NorthwindContext context = new();
 
-			var products = context.Products
-				.Include(product => product.Category)
-				.Include(product => product.Supplier)
-				.ToList();
+			List<Data.Product> products = [.. context.Products];
 
-			gridControl1 .DataSource = products;
+			gridControl1.DataSource = products;
 
 			gridView1.Columns["Category"].Visible = false;
+			gridView1.Columns["Supplier"].Visible = false;
+			gridView1.Columns["OrderDetails"].Visible = false;
+		}
+
+		private void gridControl1_Click(object sender, EventArgs e)
+		{
+
 		}
 	}
 }

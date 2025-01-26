@@ -28,10 +28,15 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductManagementControl));
 			gridControl1 = new DevExpress.XtraGrid.GridControl();
 			gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+			panelControl1 = new DevExpress.XtraEditors.PanelControl();
+			btnSaveProducts = new DevExpress.XtraEditors.SimpleButton();
 			((System.ComponentModel.ISupportInitialize)gridControl1).BeginInit();
 			((System.ComponentModel.ISupportInitialize)gridView1).BeginInit();
+			((System.ComponentModel.ISupportInitialize)panelControl1).BeginInit();
+			panelControl1.SuspendLayout();
 			SuspendLayout();
 			// 
 			// gridControl1
@@ -43,22 +48,45 @@
 			gridControl1.Size = new Size(800, 450);
 			gridControl1.TabIndex = 0;
 			gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] { gridView1 });
+			gridControl1.Click += gridControl1_Click;
 			// 
 			// gridView1
 			// 
 			gridView1.GridControl = gridControl1;
 			gridView1.Name = "gridView1";
 			// 
+			// panelControl1
+			// 
+			panelControl1.Controls.Add(btnSaveProducts);
+			panelControl1.Dock = DockStyle.Top;
+			panelControl1.Location = new Point(0, 0);
+			panelControl1.Name = "panelControl1";
+			panelControl1.Size = new Size(800, 40);
+			panelControl1.TabIndex = 1;
+			// 
+			// btnSaveProducts
+			// 
+			btnSaveProducts.Dock = DockStyle.Left;
+			btnSaveProducts.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("btnSaveProducts.ImageOptions.SvgImage");
+			btnSaveProducts.Location = new Point(2, 2);
+			btnSaveProducts.Name = "btnSaveProducts";
+			btnSaveProducts.Size = new Size(37, 36);
+			btnSaveProducts.TabIndex = 0;
+			btnSaveProducts.ToolTip = "Save changes to the database.";
+			// 
 			// ProductManagementControl
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
+			Controls.Add(panelControl1);
 			Controls.Add(gridControl1);
 			Name = "ProductManagementControl";
 			Size = new Size(800, 450);
 			Load += ProductManagementForm_Load;
 			((System.ComponentModel.ISupportInitialize)gridControl1).EndInit();
 			((System.ComponentModel.ISupportInitialize)gridView1).EndInit();
+			((System.ComponentModel.ISupportInitialize)panelControl1).EndInit();
+			panelControl1.ResumeLayout(false);
 			ResumeLayout(false);
 		}
 
@@ -66,5 +94,7 @@
 
 		private DevExpress.XtraGrid.GridControl gridControl1;
 		private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+		private DevExpress.XtraEditors.PanelControl panelControl1;
+		private DevExpress.XtraEditors.SimpleButton btnSaveProducts;
 	}
 }
