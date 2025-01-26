@@ -21,6 +21,9 @@ namespace InventoryControl
 
 			gridControl1.DataSource = products;
 
+			gridView1.Columns["ProductId"].OptionsColumn.AllowEdit = false;
+			gridView1.Columns["ProductId"].OptionsColumn.ReadOnly = true;
+
 			gridView1.Columns["Category"].Visible = false;
 			gridView1.Columns["Supplier"].Visible = false;
 			gridView1.Columns["OrderDetails"].Visible = false;

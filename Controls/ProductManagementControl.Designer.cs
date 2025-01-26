@@ -32,8 +32,8 @@
 			gridControl1 = new DevExpress.XtraGrid.GridControl();
 			gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
 			panelControl1 = new DevExpress.XtraEditors.PanelControl();
-			btnSaveProducts = new DevExpress.XtraEditors.SimpleButton();
 			btnAddNewProduct = new DevExpress.XtraEditors.SimpleButton();
+			btnSaveProducts = new DevExpress.XtraEditors.SimpleButton();
 			((System.ComponentModel.ISupportInitialize)gridControl1).BeginInit();
 			((System.ComponentModel.ISupportInitialize)gridView1).BeginInit();
 			((System.ComponentModel.ISupportInitialize)panelControl1).BeginInit();
@@ -65,6 +65,18 @@
 			panelControl1.Size = new Size(800, 40);
 			panelControl1.TabIndex = 1;
 			// 
+			// btnAddNewProduct
+			// 
+			btnAddNewProduct.AllowHtmlTextInToolTip = DevExpress.Utils.DefaultBoolean.True;
+			btnAddNewProduct.Dock = DockStyle.Left;
+			btnAddNewProduct.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("btnAddNewProduct.ImageOptions.SvgImage");
+			btnAddNewProduct.Location = new Point(39, 2);
+			btnAddNewProduct.Name = "btnAddNewProduct";
+			btnAddNewProduct.Size = new Size(37, 36);
+			btnAddNewProduct.TabIndex = 2;
+			btnAddNewProduct.ToolTip = "Add a new product";
+			btnAddNewProduct.Click += btnAddNewProduct_Click;
+			// 
 			// btnSaveProducts
 			// 
 			btnSaveProducts.Dock = DockStyle.Left;
@@ -75,17 +87,6 @@
 			btnSaveProducts.TabIndex = 1;
 			btnSaveProducts.ToolTip = "Save changes to the database.";
 			btnSaveProducts.Click += BtnSaveProducts_Click;
-			// 
-			// btnAddNewProduct
-			// 
-			btnAddNewProduct.AllowHtmlTextInToolTip = DevExpress.Utils.DefaultBoolean.True;
-			btnAddNewProduct.Dock = DockStyle.Left;
-			btnAddNewProduct.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("btnAddNewProduct.ImageOptions.SvgImage");
-			btnAddNewProduct.Location = new Point(39, 2);
-			btnAddNewProduct.Name = "btnAddNewProduct";
-			btnAddNewProduct.Size = new Size(37, 36);
-			btnAddNewProduct.TabIndex = 2;
-			btnAddNewProduct.Click += btnAddNewProduct_Click;
 			// 
 			// ProductManagementControl
 			// 

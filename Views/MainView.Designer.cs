@@ -112,6 +112,7 @@
 			Name = "MainView";
 			Ribbon = ribbonControl1;
 			Text = "{Title}";
+			WindowState = FormWindowState.Maximized;
 			((System.ComponentModel.ISupportInitialize)ribbonControl1).EndInit();
 			((System.ComponentModel.ISupportInitialize)mvvmContext1).EndInit();
 			((System.ComponentModel.ISupportInitialize)panelControl1).EndInit();
