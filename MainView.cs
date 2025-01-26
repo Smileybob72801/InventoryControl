@@ -32,8 +32,10 @@ namespace InventoryControl
 
 		private void BtnManageProducts_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
 		{
-			ProductManagementControl productManagementControl = new();
-			productManagementControl.Dock = DockStyle.Fill;
+			ProductManagementControl productManagementControl = new()
+			{
+				Dock = DockStyle.Fill
+			};
 
 			ShowControl(productManagementControl);
 		}
