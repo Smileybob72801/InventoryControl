@@ -43,6 +43,10 @@
 			btnStockLevelsAnalytics = new DevExpress.XtraBars.BarButtonItem();
 			btnReorderLevelsAnalytics = new DevExpress.XtraBars.BarButtonItem();
 			btnValueAnalytics = new DevExpress.XtraBars.BarButtonItem();
+			ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+			btnSupplierContributionAnalytics = new DevExpress.XtraBars.BarButtonItem();
+			ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+			barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
 			((System.ComponentModel.ISupportInitialize)ribbonControl1).BeginInit();
 			((System.ComponentModel.ISupportInitialize)mvvmContext1).BeginInit();
 			((System.ComponentModel.ISupportInitialize)panelControl1).BeginInit();
@@ -51,9 +55,9 @@
 			// ribbonControl1
 			// 
 			ribbonControl1.ExpandCollapseItem.Id = 0;
-			ribbonControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] { ribbonControl1.ExpandCollapseItem, btnManageProducts, barButtonItem1, btnStockLevelsAnalytics, btnReorderLevelsAnalytics, btnValueAnalytics });
+			ribbonControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] { ribbonControl1.ExpandCollapseItem, btnManageProducts, barButtonItem1, btnStockLevelsAnalytics, btnReorderLevelsAnalytics, btnValueAnalytics, btnSupplierContributionAnalytics, barButtonItem3 });
 			ribbonControl1.Location = new Point(0, 0);
-			ribbonControl1.MaxItemId = 6;
+			ribbonControl1.MaxItemId = 8;
 			ribbonControl1.Name = "ribbonControl1";
 			ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] { ribbonPageProducts, ribbonPage2 });
 			ribbonControl1.Size = new Size(841, 158);
@@ -91,7 +95,7 @@
 			// 
 			// ribbonPage2
 			// 
-			ribbonPage2.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] { ribbonPageGroup2 });
+			ribbonPage2.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] { ribbonPageGroup2, ribbonPageGroup3, ribbonPageGroup4 });
 			ribbonPage2.Name = "ribbonPage2";
 			ribbonPage2.Text = "Analytics";
 			// 
@@ -141,6 +145,31 @@
 			btnValueAnalytics.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("btnValueAnalytics.ImageOptions.SvgImage");
 			btnValueAnalytics.Name = "btnValueAnalytics";
 			// 
+			// ribbonPageGroup3
+			// 
+			ribbonPageGroup3.ItemLinks.Add(btnSupplierContributionAnalytics);
+			ribbonPageGroup3.Name = "ribbonPageGroup3";
+			ribbonPageGroup3.Text = "Suppliers";
+			// 
+			// btnSupplierContributionAnalytics
+			// 
+			btnSupplierContributionAnalytics.Caption = "Supplier Contribution";
+			btnSupplierContributionAnalytics.Id = 6;
+			btnSupplierContributionAnalytics.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("btnSupplierContributionAnalytics.ImageOptions.SvgImage");
+			btnSupplierContributionAnalytics.Name = "btnSupplierContributionAnalytics";
+			// 
+			// ribbonPageGroup4
+			// 
+			ribbonPageGroup4.ItemLinks.Add(barButtonItem3);
+			ribbonPageGroup4.Name = "ribbonPageGroup4";
+			ribbonPageGroup4.Text = "Categories";
+			// 
+			// barButtonItem3
+			// 
+			barButtonItem3.Caption = "barButtonItem3";
+			barButtonItem3.Id = 7;
+			barButtonItem3.Name = "barButtonItem3";
+			// 
 			// MainView
 			// 
 			AutoScaleDimensions = new SizeF(6F, 13F);
@@ -174,6 +203,10 @@
 		private DevExpress.XtraBars.BarButtonItem btnStockLevelsAnalytics;
 		private DevExpress.XtraBars.BarButtonItem btnReorderLevelsAnalytics;
 		private DevExpress.XtraBars.BarButtonItem btnValueAnalytics;
+		private DevExpress.XtraBars.BarButtonItem btnSupplierContributionAnalytics;
+		private DevExpress.XtraBars.BarButtonItem barButtonItem3;
+		private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
+		private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
 	}
 }
 
