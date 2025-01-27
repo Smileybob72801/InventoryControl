@@ -19,38 +19,33 @@ namespace InventoryControl.Controls.Analytics
 			InitializeComponent();
 		}
 
-		private void SalesTrendsControl_Load(object sender, EventArgs e)
+		private void LoadCategories()
 		{
 			using NorthwindContext context = new();
 
-			var monthlySales = context.OrderDetails
-				.Where(od => od.Order.OrderDate.HasValue)
-				.GroupBy(orderDetails => new { orderDetails.Order.OrderDate.Value.Year, orderDetails.Order.OrderDate.Value.Month }) // Group by Year and Month
-				.Select(group => new
+			var categories = context.Categories
+				.Select(category => new
 				{
-					Year = group.Key.Year,
-					Month = group.Key.Month,
-					TotalSales = group.Sum(od => od.UnitPrice * od.Quantity * (decimal)(1 - od.Discount))
+					category.CategoryId,
+					category.CategoryName
 				})
-				.AsEnumerable()
-				.Select(group => new
-				{
-					Period = new DateTime(group.Year, group.Month, 1),
-					group.TotalSales
-				})
-				.OrderBy(g => g.Period)
+				.OrderBy(category => category.CategoryName)
 				.ToList();
 
-			Series series = new("Monthly Sales", ViewType.Line)
+			checkedComboBoxCategories.Properties.Items.Clear();
+
+			foreach (var category in categories)
 			{
-				DataSource = monthlySales,
-				ArgumentDataMember = "Period"
-			};
-			series.ValueDataMembers.AddRange(["TotalSales"]);
+				checkedComboBoxCategories.Properties.Items.Add(new
+					DevExpress.XtraEditors.Controls.CheckedListBoxItem(
+						category.CategoryId, category.CategoryName, CheckState.Checked));
+			}
+		}
 
-			CustomizeChart(chartControl1);
-
-			chartControl1.Series.Add(series);
+		private void SalesTrendsControl_Load(object sender, EventArgs e)
+		{
+			LoadCategories();
+			LoadChartData();
 		}
 
 		private void CustomizeChart(ChartControl chartControl)
@@ -62,7 +57,77 @@ namespace InventoryControl.Controls.Analytics
 				diagram.AxisX.DateTimeScaleOptions.GridAlignment = DateTimeGridAlignment.Month;
 				diagram.AxisX.Label.TextPattern = "{A:MMM yyyy}";
 				diagram.AxisY.Label.TextPattern = "{V:C}"; // Currency format
+
+				chartControl.Legend.Visibility = DevExpress.Utils.DefaultBoolean.True;
 			}
+		}
+
+		private void LoadChartData()
+		{
+			using NorthwindContext context = new();
+
+			var selectedCategoryIds = checkedComboBoxCategories.Properties.Items
+				.OfType<DevExpress.XtraEditors.Controls.CheckedListBoxItem>()
+				.Where(item => item.CheckState == CheckState.Checked)
+				.Select(item => (int)item.Value)
+				.ToList();
+
+			var salesData = context.OrderDetails
+				.Where(orderDetails => orderDetails.Order.OrderDate.HasValue &&
+							 selectedCategoryIds.Contains(orderDetails.Product.CategoryId ?? 0))
+				.GroupBy(orderDetails => new
+				{
+					orderDetails.Product.CategoryId,
+					Year = orderDetails.Order.OrderDate.Value.Year,
+					Month = orderDetails.Order.OrderDate.Value.Month
+				})
+				.Select(group => new
+				{
+					CategoryId = group.Key.CategoryId,
+					Year = group.Key.Year,
+					Month = group.Key.Month,
+					TotalSales = group.Sum(od => od.UnitPrice * od.Quantity * (decimal)(1 - od.Discount))
+				})
+				.AsEnumerable()
+				.Select(data => new
+				{
+					CategoryId = data.CategoryId,
+					CategoryName = checkedComboBoxCategories.Properties.Items
+						.OfType<DevExpress.XtraEditors.Controls.CheckedListBoxItem>()
+						.FirstOrDefault(item => (int)item.Value == data.CategoryId)?.Description ?? "Unknown",
+					Period = new DateTime(data.Year, data.Month, 1),
+					data.TotalSales
+				})
+				.ToList();
+			
+			chartControl1.Series.Clear();
+			
+			foreach (var categoryId in selectedCategoryIds)
+			{
+				var categorySales = salesData
+					.Where(s => s.CategoryId == categoryId)
+					.OrderBy(s => s.Period)
+					.ToList();
+
+				if (categorySales.Any())
+				{
+					Series series = new($"{categorySales.First().CategoryName} Sales", ViewType.Line)
+					{
+						DataSource = categorySales,
+						ArgumentDataMember = "Period"
+					};
+					series.ValueDataMembers.AddRange(["TotalSales"]);
+
+					chartControl1.Series.Add(series);
+				}
+			}
+
+			CustomizeChart(chartControl1);
+		}
+
+		private void checkedComboBoxCategories_EditValueChanged(object sender, EventArgs e)
+		{
+			LoadChartData();
 		}
 	}
 }
