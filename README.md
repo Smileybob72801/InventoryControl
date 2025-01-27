@@ -37,6 +37,11 @@ This project is a Windows Forms application designed to manage inventory data. I
 #### Database management
 ![Database management](https://raw.githubusercontent.com/Smileybob72801/InventoryControl/refs/heads/master/Docs/Screenshots/DeleteProducts.png)
 
+#### Supplier Insights
+![Supplier Contribution Screenshot](https://raw.githubusercontent.com/Smileybob72801/InventoryControl/refs/heads/master/Docs/Screenshots/Suppliers.png)
+
+#### Sales Trends
+![Sales Trends Screenshot](https://raw.githubusercontent.com/Smileybob72801/InventoryControl/refs/heads/master/Docs/Screenshots/SalesTrends.png)
 
 ## Technologies Used
 
