@@ -24,7 +24,7 @@ namespace InventoryControl
 				InitializeBindings();
 		}
 
-		void InitializeBindings()
+		private void InitializeBindings()
 		{
 			var fluent = mvvmContext1.OfType<MainViewModel>();
 			// View and ViewModel Lifetime
