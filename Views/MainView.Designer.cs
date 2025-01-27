@@ -47,6 +47,9 @@
 			btnSupplierContributionAnalytics = new DevExpress.XtraBars.BarButtonItem();
 			ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
 			btnCategoryRevenue = new DevExpress.XtraBars.BarButtonItem();
+			ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+			btnTopProductsInsights = new DevExpress.XtraBars.BarButtonItem();
+			btnSalesTrendsInsights = new DevExpress.XtraBars.BarButtonItem();
 			((System.ComponentModel.ISupportInitialize)ribbonControl1).BeginInit();
 			((System.ComponentModel.ISupportInitialize)mvvmContext1).BeginInit();
 			((System.ComponentModel.ISupportInitialize)panelControl1).BeginInit();
@@ -55,9 +58,9 @@
 			// ribbonControl1
 			// 
 			ribbonControl1.ExpandCollapseItem.Id = 0;
-			ribbonControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] { ribbonControl1.ExpandCollapseItem, btnManageProducts, barButtonItem1, btnStockLevelsAnalytics, btnReorderLevelsAnalytics, btnValueAnalytics, btnSupplierContributionAnalytics, btnCategoryRevenue });
+			ribbonControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] { ribbonControl1.ExpandCollapseItem, btnManageProducts, barButtonItem1, btnStockLevelsAnalytics, btnReorderLevelsAnalytics, btnValueAnalytics, btnSupplierContributionAnalytics, btnCategoryRevenue, btnTopProductsInsights, btnSalesTrendsInsights });
 			ribbonControl1.Location = new Point(0, 0);
-			ribbonControl1.MaxItemId = 8;
+			ribbonControl1.MaxItemId = 11;
 			ribbonControl1.Name = "ribbonControl1";
 			ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] { ribbonPageProducts, ribbonPage2 });
 			ribbonControl1.Size = new Size(841, 158);
@@ -95,7 +98,7 @@
 			// 
 			// ribbonPage2
 			// 
-			ribbonPage2.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] { ribbonPageGroup2, ribbonPageGroup3, ribbonPageGroup4 });
+			ribbonPage2.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] { ribbonPageGroup2, ribbonPageGroup3, ribbonPageGroup4, ribbonPageGroup5 });
 			ribbonPage2.Name = "ribbonPage2";
 			ribbonPage2.Text = "Analytics";
 			// 
@@ -171,6 +174,27 @@
 			btnCategoryRevenue.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("btnCategoryRevenue.ImageOptions.SvgImage");
 			btnCategoryRevenue.Name = "btnCategoryRevenue";
 			// 
+			// ribbonPageGroup5
+			// 
+			ribbonPageGroup5.ItemLinks.Add(btnTopProductsInsights);
+			ribbonPageGroup5.ItemLinks.Add(btnSalesTrendsInsights);
+			ribbonPageGroup5.Name = "ribbonPageGroup5";
+			ribbonPageGroup5.Text = "Insights";
+			// 
+			// btnTopProductsInsights
+			// 
+			btnTopProductsInsights.Caption = "Top Products";
+			btnTopProductsInsights.Id = 8;
+			btnTopProductsInsights.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("btnTopProductsInsights.ImageOptions.SvgImage");
+			btnTopProductsInsights.Name = "btnTopProductsInsights";
+			// 
+			// btnSalesTrendsInsights
+			// 
+			btnSalesTrendsInsights.Caption = "Sales Trends";
+			btnSalesTrendsInsights.Id = 9;
+			btnSalesTrendsInsights.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("btnSalesTrendsInsights.ImageOptions.SvgImage");
+			btnSalesTrendsInsights.Name = "btnSalesTrendsInsights";
+			// 
 			// MainView
 			// 
 			AutoScaleDimensions = new SizeF(6F, 13F);
@@ -208,6 +232,9 @@
 		private DevExpress.XtraBars.BarButtonItem btnCategoryRevenue;
 		private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
 		private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
+		private DevExpress.XtraBars.BarButtonItem btnTopProductsInsights;
+		private DevExpress.XtraBars.BarButtonItem btnSalesTrendsInsights;
+		private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup5;
 	}
 }
 
