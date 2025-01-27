@@ -1,4 +1,7 @@
-﻿namespace InventoryControl
+﻿using DevExpress.LookAndFeel;
+using DevExpress.Skins;
+
+namespace InventoryControl
 {
     internal static class Program
     {
@@ -15,6 +18,9 @@
             // Registering  the global instances of required application services (if required)
             // see https://docs.devexpress.com/WindowsForms/114173/build-an-application/winforms-mvvm/concepts/view-management
             // DevExpress.Mvvm.ServiceContainer.Default.RegisterService(new ViewLocatorService());
+
+            UserLookAndFeel.Default.SetSkinStyle("The Bezier");
+            
 
             Application.Run(new MainView());
         }

@@ -40,12 +40,15 @@
 			btnCategoryRevenue = new DevExpress.XtraBars.BarButtonItem();
 			btnTopProductsInsights = new DevExpress.XtraBars.BarButtonItem();
 			btnSalesTrendsInsights = new DevExpress.XtraBars.BarButtonItem();
+			ribbonGalleryBarItem1 = new DevExpress.XtraBars.RibbonGalleryBarItem();
 			ribbonPageProducts = new DevExpress.XtraBars.Ribbon.RibbonPage();
 			ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
 			ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
 			ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
 			ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
 			ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+			ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+			ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
 			mvvmContext1 = new DevExpress.Utils.MVVM.MVVMContext(components);
 			ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
 			panelControl1 = new DevExpress.XtraEditors.PanelControl();
@@ -60,11 +63,11 @@
 			// ribbonControl1
 			// 
 			ribbonControl1.ExpandCollapseItem.Id = 0;
-			ribbonControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] { ribbonControl1.ExpandCollapseItem, btnManageProducts, barButtonItem1, btnStockLevelsAnalytics, btnReorderLevelsAnalytics, btnValueAnalytics, btnSupplierContributionAnalytics, btnCategoryRevenue, btnTopProductsInsights, btnSalesTrendsInsights });
+			ribbonControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] { ribbonControl1.ExpandCollapseItem, btnManageProducts, barButtonItem1, btnStockLevelsAnalytics, btnReorderLevelsAnalytics, btnValueAnalytics, btnSupplierContributionAnalytics, btnCategoryRevenue, btnTopProductsInsights, btnSalesTrendsInsights, ribbonGalleryBarItem1 });
 			ribbonControl1.Location = new Point(0, 0);
-			ribbonControl1.MaxItemId = 11;
+			ribbonControl1.MaxItemId = 13;
 			ribbonControl1.Name = "ribbonControl1";
-			ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] { ribbonPageProducts, ribbonPage2 });
+			ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] { ribbonPageProducts, ribbonPage2, ribbonPage1 });
 			ribbonControl1.Size = new Size(841, 158);
 			// 
 			// btnManageProducts
@@ -139,6 +142,12 @@
 			btnSalesTrendsInsights.Name = "btnSalesTrendsInsights";
 			btnSalesTrendsInsights.ItemClick += btnSalesTrendsInsights_ItemClick;
 			// 
+			// ribbonGalleryBarItem1
+			// 
+			ribbonGalleryBarItem1.Caption = "ribbonGalleryBarItem1";
+			ribbonGalleryBarItem1.Id = 12;
+			ribbonGalleryBarItem1.Name = "ribbonGalleryBarItem1";
+			// 
 			// ribbonPageProducts
 			// 
 			ribbonPageProducts.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] { ribbonPageGroup1 });
@@ -178,6 +187,18 @@
 			ribbonPageGroup5.Name = "ribbonPageGroup5";
 			ribbonPageGroup5.Text = "Insights";
 			// 
+			// ribbonPage1
+			// 
+			ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] { ribbonPageGroup4 });
+			ribbonPage1.Name = "ribbonPage1";
+			ribbonPage1.Text = "Customization";
+			// 
+			// ribbonPageGroup4
+			// 
+			ribbonPageGroup4.ItemLinks.Add(ribbonGalleryBarItem1);
+			ribbonPageGroup4.Name = "ribbonPageGroup4";
+			ribbonPageGroup4.Text = "Appearance";
+			// 
 			// mvvmContext1
 			// 
 			mvvmContext1.ContainerControl = this;
@@ -215,6 +236,7 @@
 			Ribbon = ribbonControl1;
 			Text = "{Title}";
 			WindowState = FormWindowState.Maximized;
+			Load += MainView_Load;
 			((System.ComponentModel.ISupportInitialize)ribbonControl1).EndInit();
 			((System.ComponentModel.ISupportInitialize)mvvmContext1).EndInit();
 			((System.ComponentModel.ISupportInitialize)panelControl1).EndInit();
@@ -246,6 +268,9 @@
 		private DevExpress.XtraBars.BarButtonItem btnSalesTrendsInsights;
 		private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup5;
 		private DevExpress.Utils.Layout.StackPanel stackPanel1;
+		private DevExpress.XtraBars.RibbonGalleryBarItem ribbonGalleryBarItem1;
+		private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage1;
+		private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
 	}
 }
 

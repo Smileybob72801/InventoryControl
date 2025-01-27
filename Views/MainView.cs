@@ -1,5 +1,9 @@
-﻿using InventoryControl.Controls;
+﻿using DevExpress.Skins;
+using DevExpress.XtraBars.Helpers;
+using InventoryControl.Controls;
 using InventoryControl.Controls.Analytics;
+using DevExpress.LookAndFeel;
+using DevExpress.XtraBars.Ribbon;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -83,6 +87,11 @@ namespace InventoryControl
 		{
 			SalesTrendsControl salesTrendsControl = new();
 			ShowControl(salesTrendsControl);
+		}
+
+		private void MainView_Load(object sender, EventArgs e)
+		{
+			SkinHelper.InitSkinGallery(ribbonGalleryBarItem1, true);
 		}
 	}
 }
