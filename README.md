@@ -15,7 +15,7 @@ This project is a Windows Forms application designed to manage inventory data us
    - Display supplier information.
 
 - **Stock Tracking**
-   - Visualize stock levels and suggestions for reorders.
+  - Visualize stock levels and suggestions for reorders.
 
 ### Analytics Dashboard
 - **Stock Levels Analysis**: 
