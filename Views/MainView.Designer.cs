@@ -45,7 +45,6 @@
 			ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
 			ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
 			ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-			ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
 			ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
 			mvvmContext1 = new DevExpress.Utils.MVVM.MVVMContext(components);
 			ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -155,7 +154,7 @@
 			// 
 			// ribbonPage2
 			// 
-			ribbonPage2.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] { ribbonPageGroup2, ribbonPageGroup3, ribbonPageGroup4, ribbonPageGroup5 });
+			ribbonPage2.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] { ribbonPageGroup2, ribbonPageGroup3, ribbonPageGroup5 });
 			ribbonPage2.Name = "ribbonPage2";
 			ribbonPage2.Text = "Analytics";
 			// 
@@ -171,12 +170,6 @@
 			ribbonPageGroup3.ItemLinks.Add(btnSupplierContributionAnalytics);
 			ribbonPageGroup3.Name = "ribbonPageGroup3";
 			ribbonPageGroup3.Text = "Suppliers";
-			// 
-			// ribbonPageGroup4
-			// 
-			ribbonPageGroup4.ItemLinks.Add(btnCategoryRevenue);
-			ribbonPageGroup4.Name = "ribbonPageGroup4";
-			ribbonPageGroup4.Text = "Categories";
 			// 
 			// ribbonPageGroup5
 			// 
@@ -249,7 +242,6 @@
 		private DevExpress.XtraBars.BarButtonItem btnSupplierContributionAnalytics;
 		private DevExpress.XtraBars.BarButtonItem btnCategoryRevenue;
 		private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
-		private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
 		private DevExpress.XtraBars.BarButtonItem btnTopProductsInsights;
 		private DevExpress.XtraBars.BarButtonItem btnSalesTrendsInsights;
 		private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup5;
