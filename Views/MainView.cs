@@ -60,5 +60,11 @@ namespace InventoryControl
 			StockLevelsControl stockLevelsControl = new();
 			ShowControl(stockLevelsControl);
 		}
+
+		private void btnReorderLevelsAnalytics_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+		{
+			ReorderAlertControl reorderAlertControl = new();
+			ShowControl(reorderAlertControl);
+		}
 	}
 }

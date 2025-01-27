@@ -100,6 +100,7 @@
 			btnReorderLevelsAnalytics.Id = 4;
 			btnReorderLevelsAnalytics.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("btnReorderLevelsAnalytics.ImageOptions.SvgImage");
 			btnReorderLevelsAnalytics.Name = "btnReorderLevelsAnalytics";
+			btnReorderLevelsAnalytics.ItemClick += btnReorderLevelsAnalytics_ItemClick;
 			// 
 			// btnValueAnalytics
 			// 

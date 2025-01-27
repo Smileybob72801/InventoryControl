@@ -1,6 +1,6 @@
 ﻿namespace InventoryControl.Controls.Analytics
 {
-	partial class ReordesAlertControl
+	partial class ReorderAlertControl
 	{
 		/// <summary> 
 		/// Required designer variable.
@@ -40,14 +40,14 @@
 			tileControl1.TabIndex = 0;
 			tileControl1.Text = "tileControl1";
 			// 
-			// ReordesAlertControl
+			// ReorderAlertControl
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
 			Controls.Add(tileControl1);
-			Name = "ReordesAlertControl";
+			Name = "ReorderAlertControl";
 			Size = new Size(626, 453);
-			Load += ReordesAlertControl_Load;
+			Load += this.ReorderAlertControl_Load;
 			ResumeLayout(false);
 		}
 
