@@ -46,7 +46,7 @@
 			ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
 			btnSupplierContributionAnalytics = new DevExpress.XtraBars.BarButtonItem();
 			ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-			barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
+			btnCategoryRevenue = new DevExpress.XtraBars.BarButtonItem();
 			((System.ComponentModel.ISupportInitialize)ribbonControl1).BeginInit();
 			((System.ComponentModel.ISupportInitialize)mvvmContext1).BeginInit();
 			((System.ComponentModel.ISupportInitialize)panelControl1).BeginInit();
@@ -55,7 +55,7 @@
 			// ribbonControl1
 			// 
 			ribbonControl1.ExpandCollapseItem.Id = 0;
-			ribbonControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] { ribbonControl1.ExpandCollapseItem, btnManageProducts, barButtonItem1, btnStockLevelsAnalytics, btnReorderLevelsAnalytics, btnValueAnalytics, btnSupplierContributionAnalytics, barButtonItem3 });
+			ribbonControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] { ribbonControl1.ExpandCollapseItem, btnManageProducts, barButtonItem1, btnStockLevelsAnalytics, btnReorderLevelsAnalytics, btnValueAnalytics, btnSupplierContributionAnalytics, btnCategoryRevenue });
 			ribbonControl1.Location = new Point(0, 0);
 			ribbonControl1.MaxItemId = 8;
 			ribbonControl1.Name = "ribbonControl1";
@@ -160,15 +160,16 @@
 			// 
 			// ribbonPageGroup4
 			// 
-			ribbonPageGroup4.ItemLinks.Add(barButtonItem3);
+			ribbonPageGroup4.ItemLinks.Add(btnCategoryRevenue);
 			ribbonPageGroup4.Name = "ribbonPageGroup4";
 			ribbonPageGroup4.Text = "Categories";
 			// 
-			// barButtonItem3
+			// btnCategoryRevenue
 			// 
-			barButtonItem3.Caption = "barButtonItem3";
-			barButtonItem3.Id = 7;
-			barButtonItem3.Name = "barButtonItem3";
+			btnCategoryRevenue.Caption = "Category Revenue";
+			btnCategoryRevenue.Id = 7;
+			btnCategoryRevenue.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("btnCategoryRevenue.ImageOptions.SvgImage");
+			btnCategoryRevenue.Name = "btnCategoryRevenue";
 			// 
 			// MainView
 			// 
@@ -204,7 +205,7 @@
 		private DevExpress.XtraBars.BarButtonItem btnReorderLevelsAnalytics;
 		private DevExpress.XtraBars.BarButtonItem btnValueAnalytics;
 		private DevExpress.XtraBars.BarButtonItem btnSupplierContributionAnalytics;
-		private DevExpress.XtraBars.BarButtonItem barButtonItem3;
+		private DevExpress.XtraBars.BarButtonItem btnCategoryRevenue;
 		private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
 		private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
 	}
