@@ -1,0 +1,50 @@
+# Inventory Management System (DevExpress WinForms)
+
+This project is a Windows Forms application designed to manage inventory data using the **Northwind** database. It leverages **DevExpress** controls and MVVM architecture for a modern and professional user interface.
+
+---
+
+## Features
+
+### Core Features
+1. **Product Management**
+   - Display products in a grid with sorting, filtering, and grouping capabilities.
+   - CRUD operations for products using an intuitive UI.
+   - 
+2. **Supplier Integration**
+   - Display supplier information.
+
+3. **Stock Tracking**
+   - Visualize stock levels and suggestions for reorders.
+
+### Analytics Dashboard
+- **Stock Levels Analysis**: 
+  - Visualize stock levels by category using a bar chart.
+- **Reorder Alerts**: 
+  - Display products below reorder levels as customizable tiles, with a critical stock indicator.
+- **Supplier Contribution**:
+  - A pie chart showing the percentage of stock provided by each supplier, with small contributors grouped into "Others".
+- **Top Products**:
+  - Bar chart highlighting the top 10 revenue-generating products.
+- **Sales Trends**:
+  - Line chart displaying monthly sales trends.
+
+### Reporting
+- Generate reports for stock levels, reorder points, and product details.
+- Export data to PDF, Excel, or CSV formats.
+
+---
+
+## Technologies Used
+
+1. **Frontend**
+   - **DevExpress WinForms**: Ribbon, Data Grids, Chart Controls, Tile Controls, and more for a professional UI.
+
+2. **Backend**
+   - **Entity Framework Core**: ORM for seamless database integration with the Northwind database.
+   - **MVVM Framework**: Implements MVVM for a clean separation of concerns.
+
+3. **Database**
+   - **Northwind**: Sample database with `Products`, `Categories`, `Suppliers`, `Orders`, and related tables.
+
+---
