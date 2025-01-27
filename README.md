@@ -1,6 +1,6 @@
 # Inventory Management System (DevExpress WinForms)
 
-This project is a Windows Forms application designed to manage inventory data using the **Northwind** database. It leverages **DevExpress** controls and MVVM architecture for a modern and professional user interface.
+This project is a Windows Forms application designed to manage inventory data. It leverages **DevExpress** controls for a modern and professional user interface.
 
 ---
 
