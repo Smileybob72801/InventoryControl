@@ -63,8 +63,8 @@ Clone the repository:
 ```bash
 git clone https://github.com/Smileybob72801/InventoryControl.git
 ```
-
-You will need to edit the DB connection string to match your server.
+<You will need to import Microsofts free development database, Northwind.
+You will also need to edit the DB connection string to match your server.>
 
 ```bash
 cd InventoryControl/InventoryControl
