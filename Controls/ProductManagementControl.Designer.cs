@@ -42,11 +42,11 @@
 			// 
 			// gridControl1
 			// 
-			gridControl1.Dock = DockStyle.Fill;
-			gridControl1.Location = new Point(0, 0);
+			gridControl1.Dock = DockStyle.Bottom;
+			gridControl1.Location = new Point(0, 44);
 			gridControl1.MainView = gridView1;
 			gridControl1.Name = "gridControl1";
-			gridControl1.Size = new Size(800, 450);
+			gridControl1.Size = new Size(800, 406);
 			gridControl1.TabIndex = 3;
 			gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] { gridView1 });
 			// 
@@ -59,10 +59,10 @@
 			// 
 			panelControl1.Controls.Add(btnAddNewProduct);
 			panelControl1.Controls.Add(btnSaveProducts);
-			panelControl1.Dock = DockStyle.Top;
+			panelControl1.Dock = DockStyle.Fill;
 			panelControl1.Location = new Point(0, 0);
 			panelControl1.Name = "panelControl1";
-			panelControl1.Size = new Size(800, 40);
+			panelControl1.Size = new Size(800, 44);
 			panelControl1.TabIndex = 1;
 			// 
 			// btnAddNewProduct
@@ -72,7 +72,7 @@
 			btnAddNewProduct.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("btnAddNewProduct.ImageOptions.SvgImage");
 			btnAddNewProduct.Location = new Point(39, 2);
 			btnAddNewProduct.Name = "btnAddNewProduct";
-			btnAddNewProduct.Size = new Size(37, 36);
+			btnAddNewProduct.Size = new Size(37, 40);
 			btnAddNewProduct.TabIndex = 2;
 			btnAddNewProduct.ToolTip = "Add a new product";
 			btnAddNewProduct.Click += btnAddNewProduct_Click;
@@ -83,7 +83,7 @@
 			btnSaveProducts.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("btnSaveProducts.ImageOptions.SvgImage");
 			btnSaveProducts.Location = new Point(2, 2);
 			btnSaveProducts.Name = "btnSaveProducts";
-			btnSaveProducts.Size = new Size(37, 36);
+			btnSaveProducts.Size = new Size(37, 40);
 			btnSaveProducts.TabIndex = 1;
 			btnSaveProducts.ToolTip = "Save changes to the database.";
 			btnSaveProducts.Click += BtnSaveProducts_Click;

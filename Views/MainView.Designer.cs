@@ -32,6 +32,7 @@
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainView));
 			ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
 			btnManageProducts = new DevExpress.XtraBars.BarButtonItem();
+			barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
 			ribbonPageProducts = new DevExpress.XtraBars.Ribbon.RibbonPage();
 			ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
 			ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -39,7 +40,6 @@
 			mvvmContext1 = new DevExpress.Utils.MVVM.MVVMContext(components);
 			ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
 			panelControl1 = new DevExpress.XtraEditors.PanelControl();
-			barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
 			((System.ComponentModel.ISupportInitialize)ribbonControl1).BeginInit();
 			((System.ComponentModel.ISupportInitialize)mvvmContext1).BeginInit();
 			((System.ComponentModel.ISupportInitialize)panelControl1).BeginInit();
@@ -58,10 +58,20 @@
 			// btnManageProducts
 			// 
 			btnManageProducts.Caption = "Edit Products";
+			btnManageProducts.Hint = "View products in edit mode.";
 			btnManageProducts.Id = 1;
 			btnManageProducts.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("btnManageProducts.ImageOptions.SvgImage");
 			btnManageProducts.Name = "btnManageProducts";
 			btnManageProducts.ItemClick += BtnManageProducts_ItemClick;
+			// 
+			// barButtonItem1
+			// 
+			barButtonItem1.Caption = "View Products";
+			barButtonItem1.Hint = "View products in read-only mode.";
+			barButtonItem1.Id = 2;
+			barButtonItem1.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("barButtonItem1.ImageOptions.SvgImage");
+			barButtonItem1.Name = "barButtonItem1";
+			barButtonItem1.ItemClick += barButtonItem1_ItemClick;
 			// 
 			// ribbonPageProducts
 			// 
@@ -103,13 +113,6 @@
 			panelControl1.Name = "panelControl1";
 			panelControl1.Size = new Size(841, 256);
 			panelControl1.TabIndex = 1;
-			// 
-			// barButtonItem1
-			// 
-			barButtonItem1.Caption = "View Products";
-			barButtonItem1.Id = 2;
-			barButtonItem1.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("barButtonItem1.ImageOptions.SvgImage");
-			barButtonItem1.Name = "barButtonItem1";
 			// 
 			// MainView
 			// 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using InventoryControl.Controls;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -32,11 +33,7 @@ namespace InventoryControl
 
 		private void BtnManageProducts_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
 		{
-			ProductManagementControl productManagementControl = new()
-			{
-				Dock = DockStyle.Fill
-			};
-
+			ProductManagementControl productManagementControl = new();
 			ShowControl(productManagementControl);
 		}
 
@@ -49,6 +46,12 @@ namespace InventoryControl
 			control.Dock = DockStyle.Fill;
 			panelControl1.Controls.Clear();
 			panelControl1.Controls.Add(control);
+		}
+
+		private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+		{
+			ReadOnlyProductsControl readOnlyProductsControl = new();
+			ShowControl(readOnlyProductsControl);
 		}
 	}
 }
