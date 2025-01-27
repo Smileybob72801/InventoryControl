@@ -40,6 +40,9 @@
 			mvvmContext1 = new DevExpress.Utils.MVVM.MVVMContext(components);
 			ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
 			panelControl1 = new DevExpress.XtraEditors.PanelControl();
+			btnStockLevelsAnalytics = new DevExpress.XtraBars.BarButtonItem();
+			btnReorderLevelsAnalytics = new DevExpress.XtraBars.BarButtonItem();
+			btnValueAnalytics = new DevExpress.XtraBars.BarButtonItem();
 			((System.ComponentModel.ISupportInitialize)ribbonControl1).BeginInit();
 			((System.ComponentModel.ISupportInitialize)mvvmContext1).BeginInit();
 			((System.ComponentModel.ISupportInitialize)panelControl1).BeginInit();
@@ -48,9 +51,9 @@
 			// ribbonControl1
 			// 
 			ribbonControl1.ExpandCollapseItem.Id = 0;
-			ribbonControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] { ribbonControl1.ExpandCollapseItem, btnManageProducts, barButtonItem1 });
+			ribbonControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] { ribbonControl1.ExpandCollapseItem, btnManageProducts, barButtonItem1, btnStockLevelsAnalytics, btnReorderLevelsAnalytics, btnValueAnalytics });
 			ribbonControl1.Location = new Point(0, 0);
-			ribbonControl1.MaxItemId = 3;
+			ribbonControl1.MaxItemId = 6;
 			ribbonControl1.Name = "ribbonControl1";
 			ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] { ribbonPageProducts, ribbonPage2 });
 			ribbonControl1.Size = new Size(841, 158);
@@ -90,12 +93,15 @@
 			// 
 			ribbonPage2.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] { ribbonPageGroup2 });
 			ribbonPage2.Name = "ribbonPage2";
-			ribbonPage2.Text = "ribbonPage2";
+			ribbonPage2.Text = "Analytics";
 			// 
 			// ribbonPageGroup2
 			// 
+			ribbonPageGroup2.ItemLinks.Add(btnStockLevelsAnalytics);
+			ribbonPageGroup2.ItemLinks.Add(btnReorderLevelsAnalytics);
+			ribbonPageGroup2.ItemLinks.Add(btnValueAnalytics);
 			ribbonPageGroup2.Name = "ribbonPageGroup2";
-			ribbonPageGroup2.Text = "ribbonPageGroup2";
+			ribbonPageGroup2.Text = "Inventory";
 			// 
 			// mvvmContext1
 			// 
@@ -113,6 +119,27 @@
 			panelControl1.Name = "panelControl1";
 			panelControl1.Size = new Size(841, 256);
 			panelControl1.TabIndex = 1;
+			// 
+			// btnStockLevelsAnalytics
+			// 
+			btnStockLevelsAnalytics.Caption = "Stock Levels";
+			btnStockLevelsAnalytics.Id = 3;
+			btnStockLevelsAnalytics.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("btnStockLevelsAnalytics.ImageOptions.SvgImage");
+			btnStockLevelsAnalytics.Name = "btnStockLevelsAnalytics";
+			// 
+			// btnReorderLevelsAnalytics
+			// 
+			btnReorderLevelsAnalytics.Caption = "Reorders";
+			btnReorderLevelsAnalytics.Id = 4;
+			btnReorderLevelsAnalytics.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("btnReorderLevelsAnalytics.ImageOptions.SvgImage");
+			btnReorderLevelsAnalytics.Name = "btnReorderLevelsAnalytics";
+			// 
+			// btnValueAnalytics
+			// 
+			btnValueAnalytics.Caption = "Value";
+			btnValueAnalytics.Id = 5;
+			btnValueAnalytics.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("btnValueAnalytics.ImageOptions.SvgImage");
+			btnValueAnalytics.Name = "btnValueAnalytics";
 			// 
 			// MainView
 			// 
@@ -144,6 +171,9 @@
 		private DevExpress.XtraBars.BarButtonItem btnManageProducts;
 		private DevExpress.XtraEditors.PanelControl panelControl1;
 		private DevExpress.XtraBars.BarButtonItem barButtonItem1;
+		private DevExpress.XtraBars.BarButtonItem btnStockLevelsAnalytics;
+		private DevExpress.XtraBars.BarButtonItem btnReorderLevelsAnalytics;
+		private DevExpress.XtraBars.BarButtonItem btnValueAnalytics;
 	}
 }
 

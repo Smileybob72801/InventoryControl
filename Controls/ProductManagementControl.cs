@@ -130,6 +130,7 @@ namespace InventoryControl
 				{
 					_productsToDelete.Add(product);
 					gridView1.RefreshRow(selectedRowHandle);
+					gridView1.ClearSelection();
 				}
 				else
 				{
