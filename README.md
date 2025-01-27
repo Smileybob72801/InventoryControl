@@ -10,7 +10,7 @@ This project is a Windows Forms application designed to manage inventory data us
 1. **Product Management**
    - Display products in a grid with sorting, filtering, and grouping capabilities.
    - CRUD operations for products using an intuitive UI.
-   - 
+     
 2. **Supplier Integration**
    - Display supplier information.
 
