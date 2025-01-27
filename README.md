@@ -48,3 +48,24 @@ This project is a Windows Forms application designed to manage inventory data us
    - **Northwind**: Sample database with `Products`, `Categories`, `Suppliers`, `Orders`, and related tables.
 
 ---
+
+## Build the Project
+
+Clone the repository:
+```bash
+git clone https://github.com/Smileybob72801/InventoryControl.git
+```
+
+You will need to edit the DB connection string to match your server.
+
+```bash
+cd InventoryControl/InventoryControl
+```
+
+```bash
+dotnet build
+```
+
+```bash
+dotnet run
+```
