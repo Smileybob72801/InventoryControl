@@ -160,7 +160,6 @@
 			// 
 			ribbonPageGroup2.ItemLinks.Add(btnStockLevelsAnalytics);
 			ribbonPageGroup2.ItemLinks.Add(btnReorderLevelsAnalytics);
-			ribbonPageGroup2.ItemLinks.Add(btnValueAnalytics);
 			ribbonPageGroup2.Name = "ribbonPageGroup2";
 			ribbonPageGroup2.Text = "Inventory";
 			// 
