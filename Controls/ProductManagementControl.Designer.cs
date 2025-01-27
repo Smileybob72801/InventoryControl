@@ -34,6 +34,7 @@
 			panelControl1 = new DevExpress.XtraEditors.PanelControl();
 			btnAddNewProduct = new DevExpress.XtraEditors.SimpleButton();
 			btnSaveProducts = new DevExpress.XtraEditors.SimpleButton();
+			btnProductDelete = new DevExpress.XtraEditors.SimpleButton();
 			((System.ComponentModel.ISupportInitialize)gridControl1).BeginInit();
 			((System.ComponentModel.ISupportInitialize)gridView1).BeginInit();
 			((System.ComponentModel.ISupportInitialize)panelControl1).BeginInit();
@@ -57,6 +58,7 @@
 			// 
 			// panelControl1
 			// 
+			panelControl1.Controls.Add(btnProductDelete);
 			panelControl1.Controls.Add(btnAddNewProduct);
 			panelControl1.Controls.Add(btnSaveProducts);
 			panelControl1.Dock = DockStyle.Fill;
@@ -88,6 +90,15 @@
 			btnSaveProducts.ToolTip = "Save changes to the database.";
 			btnSaveProducts.Click += BtnSaveProducts_Click;
 			// 
+			// btnProductDelete
+			// 
+			btnProductDelete.Dock = DockStyle.Left;
+			btnProductDelete.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("btnProductDelete.ImageOptions.SvgImage");
+			btnProductDelete.Location = new Point(76, 2);
+			btnProductDelete.Name = "btnProductDelete";
+			btnProductDelete.Size = new Size(37, 40);
+			btnProductDelete.TabIndex = 3;
+			// 
 			// ProductManagementControl
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
@@ -111,5 +122,6 @@
 		private DevExpress.XtraEditors.PanelControl panelControl1;
 		private DevExpress.XtraEditors.SimpleButton btnSaveProducts;
 		private DevExpress.XtraEditors.SimpleButton btnAddNewProduct;
+		private DevExpress.XtraEditors.SimpleButton btnProductDelete;
 	}
 }
