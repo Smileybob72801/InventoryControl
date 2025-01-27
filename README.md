@@ -16,15 +16,15 @@ This project is a Windows Forms application designed to manage inventory data. I
   - Visualize stock levels and suggestions for reorders.
 
 ### Analytics Dashboard
-- **Stock Levels Analysis**: 
+- **Stock Levels Analysis** 
   - Visualize stock levels by category using a bar chart.
-- **Reorder Alerts**: 
+- **Reorder Alerts** 
   - Display products below reorder levels as customizable tiles, with a critical stock indicator.
-- **Supplier Contribution**:
-  - A pie chart showing the percentage of stock provided by each supplier, with small contributors grouped into "Others".
-- **Top Products**:
+- **Supplier Contribution**
+  - A pie chart showing the percentage of stock provided by each supplier, with small contributors grouped into "Others."
+- **Top Products**
   - Bar chart highlighting the top 10 revenue-generating products.
-- **Sales Trends**:
+- **Sales Trends**
   - Line chart displaying monthly sales trends.
 
 ### Reporting
