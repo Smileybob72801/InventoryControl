@@ -115,6 +115,7 @@
 			btnSupplierContributionAnalytics.Id = 6;
 			btnSupplierContributionAnalytics.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("btnSupplierContributionAnalytics.ImageOptions.SvgImage");
 			btnSupplierContributionAnalytics.Name = "btnSupplierContributionAnalytics";
+			btnSupplierContributionAnalytics.ItemClick += btnSupplierContributionAnalytics_ItemClick;
 			// 
 			// btnCategoryRevenue
 			// 
@@ -129,6 +130,7 @@
 			btnTopProductsInsights.Id = 8;
 			btnTopProductsInsights.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("btnTopProductsInsights.ImageOptions.SvgImage");
 			btnTopProductsInsights.Name = "btnTopProductsInsights";
+			btnTopProductsInsights.ItemClick += btnTopProductsInsights_ItemClick;
 			// 
 			// btnSalesTrendsInsights
 			// 

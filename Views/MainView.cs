@@ -66,5 +66,17 @@ namespace InventoryControl
 			ReorderAlertControl reorderAlertControl = new();
 			ShowControl(reorderAlertControl);
 		}
+
+		private void btnSupplierContributionAnalytics_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+		{
+			SupplierContributionControl supplierContributionControl = new();
+			ShowControl(supplierContributionControl);
+		}
+
+		private void btnTopProductsInsights_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+		{
+			TopProductsAnalyticsControl topProductsAnalyticsControl = new();
+			ShowControl(topProductsAnalyticsControl);
+		}
 	}
 }
