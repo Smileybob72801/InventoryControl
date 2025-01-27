@@ -33,6 +33,10 @@ This project is a Windows Forms application designed to manage inventory data. I
 
 ---
 
+## Screenshots
+![Database management](https://raw.githubusercontent.com/Smileybob72801/InventoryControl/refs/heads/master/Docs/Screenshots/DeleteProducts.png)
+
+
 ## Technologies Used
 
 1. **Frontend**
