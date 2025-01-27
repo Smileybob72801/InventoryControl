@@ -28,18 +28,32 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			chartControl1 = new DevExpress.XtraCharts.ChartControl();
+			((System.ComponentModel.ISupportInitialize)chartControl1).BeginInit();
 			SuspendLayout();
+			// 
+			// chartControl1
+			// 
+			chartControl1.Dock = DockStyle.Fill;
+			chartControl1.Location = new Point(0, 0);
+			chartControl1.Name = "chartControl1";
+			chartControl1.Size = new Size(573, 456);
+			chartControl1.TabIndex = 0;
 			// 
 			// SupplierContributionControl
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
+			Controls.Add(chartControl1);
 			Name = "SupplierContributionControl";
 			Size = new Size(573, 456);
 			Load += SupplierContributionControl_Load;
+			((System.ComponentModel.ISupportInitialize)chartControl1).EndInit();
 			ResumeLayout(false);
 		}
 
 		#endregion
+
+		private DevExpress.XtraCharts.ChartControl chartControl1;
 	}
 }
