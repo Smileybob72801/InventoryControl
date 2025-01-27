@@ -71,7 +71,10 @@ dotnet run
 ---
 
 ## Roadmap
-Inline validation
-Advanced Search
-Drilldown reporting
-Move the DBContext to a DI container
+- Inline validation
+- Advanced Search
+- Drilldown function for insights
+- Move the DBContext to a DI container
+- Undo Functionality
+- Accessibility Enchancements
+- Localization Support
