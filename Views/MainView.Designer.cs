@@ -50,9 +50,12 @@
 			mvvmContext1 = new DevExpress.Utils.MVVM.MVVMContext(components);
 			ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
 			panelControl1 = new DevExpress.XtraEditors.PanelControl();
+			stackPanel1 = new DevExpress.Utils.Layout.StackPanel();
 			((System.ComponentModel.ISupportInitialize)ribbonControl1).BeginInit();
 			((System.ComponentModel.ISupportInitialize)mvvmContext1).BeginInit();
 			((System.ComponentModel.ISupportInitialize)panelControl1).BeginInit();
+			panelControl1.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)stackPanel1).BeginInit();
 			SuspendLayout();
 			// 
 			// ribbonControl1
@@ -190,11 +193,20 @@
 			// 
 			// panelControl1
 			// 
+			panelControl1.Controls.Add(stackPanel1);
 			panelControl1.Dock = DockStyle.Fill;
 			panelControl1.Location = new Point(0, 158);
 			panelControl1.Name = "panelControl1";
 			panelControl1.Size = new Size(841, 256);
 			panelControl1.TabIndex = 1;
+			// 
+			// stackPanel1
+			// 
+			stackPanel1.Location = new Point(570, 110);
+			stackPanel1.Name = "stackPanel1";
+			stackPanel1.Size = new Size(340, 140);
+			stackPanel1.TabIndex = 0;
+			stackPanel1.UseSkinIndents = true;
 			// 
 			// MainView
 			// 
@@ -210,6 +222,8 @@
 			((System.ComponentModel.ISupportInitialize)ribbonControl1).EndInit();
 			((System.ComponentModel.ISupportInitialize)mvvmContext1).EndInit();
 			((System.ComponentModel.ISupportInitialize)panelControl1).EndInit();
+			panelControl1.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)stackPanel1).EndInit();
 			ResumeLayout(false);
 			PerformLayout();
 		}
@@ -236,6 +250,7 @@
 		private DevExpress.XtraBars.BarButtonItem btnTopProductsInsights;
 		private DevExpress.XtraBars.BarButtonItem btnSalesTrendsInsights;
 		private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup5;
+		private DevExpress.Utils.Layout.StackPanel stackPanel1;
 	}
 }
 
