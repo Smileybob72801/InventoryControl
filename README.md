@@ -7,14 +7,14 @@ This project is a Windows Forms application designed to manage inventory data us
 ## Features
 
 ### Core Features
-1. **Product Management**
+- **Product Management**
    - Display products in a grid with sorting, filtering, and grouping capabilities.
    - CRUD operations for products using an intuitive UI.
      
-2. **Supplier Integration**
+- **Supplier Integration**
    - Display supplier information.
 
-3. **Stock Tracking**
+- **Stock Tracking**
    - Visualize stock levels and suggestions for reorders.
 
 ### Analytics Dashboard
