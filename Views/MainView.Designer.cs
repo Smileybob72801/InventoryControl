@@ -138,6 +138,7 @@
 			btnSalesTrendsInsights.Id = 9;
 			btnSalesTrendsInsights.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("btnSalesTrendsInsights.ImageOptions.SvgImage");
 			btnSalesTrendsInsights.Name = "btnSalesTrendsInsights";
+			btnSalesTrendsInsights.ItemClick += btnSalesTrendsInsights_ItemClick;
 			// 
 			// ribbonPageProducts
 			// 

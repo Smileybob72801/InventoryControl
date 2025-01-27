@@ -78,5 +78,11 @@ namespace InventoryControl
 			TopProductsAnalyticsControl topProductsAnalyticsControl = new();
 			ShowControl(topProductsAnalyticsControl);
 		}
+
+		private void btnSalesTrendsInsights_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+		{
+			SalesTrendsControl salesTrendsControl = new();
+			ShowControl(salesTrendsControl);
+		}
 	}
 }
