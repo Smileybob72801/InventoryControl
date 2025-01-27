@@ -1,4 +1,5 @@
 ﻿using DevExpress.XtraCharts;
+using DevExpress.XtraEditors.Filtering.Templates;
 using InventoryControl.Data;
 using System;
 using System.Collections.Generic;
@@ -72,23 +73,30 @@ namespace InventoryControl.Controls.Analytics
 				.Select(item => (int)item.Value)
 				.ToList();
 
-			var salesData = context.OrderDetails
+			var filteredOrderDetails = context.OrderDetails
 				.Where(orderDetails => orderDetails.Order.OrderDate.HasValue &&
-							 selectedCategoryIds.Contains(orderDetails.Product.CategoryId ?? 0))
+					selectedCategoryIds.Contains(orderDetails.Product.CategoryId ?? 0));
+
+			var groupedSalesData = filteredOrderDetails
 				.GroupBy(orderDetails => new
 				{
 					orderDetails.Product.CategoryId,
 					Year = orderDetails.Order.OrderDate.Value.Year,
 					Month = orderDetails.Order.OrderDate.Value.Month
-				})
+				});
+
+			var aggregatedSalesData = groupedSalesData
 				.Select(group => new
 				{
 					CategoryId = group.Key.CategoryId,
 					Year = group.Key.Year,
 					Month = group.Key.Month,
-					TotalSales = group.Sum(od => od.UnitPrice * od.Quantity * (decimal)(1 - od.Discount))
+					TotalSales = group.Sum(orderDetails =>
+						orderDetails.UnitPrice * orderDetails.Quantity * (decimal)(1 - orderDetails.Discount))
 				})
-				.AsEnumerable()
+				.AsEnumerable();
+
+			var salesData = aggregatedSalesData
 				.Select(data => new
 				{
 					CategoryId = data.CategoryId,
