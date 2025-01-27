@@ -1,4 +1,5 @@
 ﻿using InventoryControl.Controls;
+using InventoryControl.Controls.Analytics;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -52,6 +53,12 @@ namespace InventoryControl
 		{
 			ReadOnlyProductsControl readOnlyProductsControl = new();
 			ShowControl(readOnlyProductsControl);
+		}
+
+		private void btnStockLevelsAnalytics_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+		{
+			StockLevelsControl stockLevelsControl = new();
+			ShowControl(stockLevelsControl);
 		}
 	}
 }
